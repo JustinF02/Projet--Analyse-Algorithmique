@@ -28,12 +28,9 @@ double saisieNombreEtVerification() { // Saisie de la somme la somme
             if (cin.fail()) { // condition qui véfirie si l'erreur de typage s'est produite
                 cout << message << endl; // envoie du message d'erreur
                 cin.clear(); // on vide le contenu de cin 
-                cin.ignore( numeric_limits<streamsize>::max(), '\n'); // supprime la ligne erroné
-            } else {
-                cout << message << endl; // envoie le message d'erreur
-            }
-    }
-    return sommeSaisie;
+                cin.ignore( numeric_limits<streamsize>::max(), '\n'); // supprime la ligne erronée
+            } else cout << message << endl; // envoie le message d'erreur
+    } return sommeSaisie;
 }
 
 /*
